@@ -2,7 +2,7 @@ import React from 'react';
 import {createStackNavigator} from '@react-navigation/stack';
 import {Home, Profile, SplashScreen} from '../screens';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
-import BottomNavigator from '../components/molecules/BottomNavigator';
+import {BottomNavigator} from '../components';
 
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();

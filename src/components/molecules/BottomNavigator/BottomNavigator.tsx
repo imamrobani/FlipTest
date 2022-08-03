@@ -1,6 +1,6 @@
 import React from 'react';
 import {StyleSheet, TouchableOpacity, View} from 'react-native';
-import {IcHomeOff, IcHomeOn, IcProfileOff, IcProfileOn} from '../../assets';
+import {IcHomeOff, IcHomeOn, IcProfileOff, IcProfileOn} from '../../../assets';
 
 interface IconProps {
   label: string;
