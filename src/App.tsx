@@ -1,26 +1,23 @@
 import React from 'react';
-import {StyleSheet, Text, View} from 'react-native';
-import {Colors, Fonts} from './const';
+import {SafeAreaView} from 'react-native';
+import {NavigationContainer} from '@react-navigation/native';
+import Router from './router';
+import {enableScreens} from 'react-native-screens';
+import {Colors} from './const';
 
-const App = () => {
+enableScreens();
+
+const MainApp = () => {
   return (
-    <View style={styles.container}>
-      <Text style={styles.title}>Wellcome !</Text>
-    </View>
+    <NavigationContainer>
+      <SafeAreaView style={{backgroundColor: Colors.purple400}} />
+      <Router />
+    </NavigationContainer>
   );
 };
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center'
-  },
-  title: {
-    fontFamily: Fonts.INTER_SEMIBOLD,
-    color: Colors.black,
-    fontSize: 16
-  }
-});
+const App = () => {
+  return <MainApp />;
+};
 
 export default App;
