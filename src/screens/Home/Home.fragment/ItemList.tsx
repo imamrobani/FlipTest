@@ -3,10 +3,17 @@ import React from 'react';
 import {Colors, Fonts} from '../../../const';
 import {IcArrowRight} from '../../../assets';
 import Status from './Status';
+import {useNavigation} from '@react-navigation/native';
 
 const ItemList = () => {
+  const navigation = useNavigation<any>();
+
+  const onDetail = () => {
+    navigation.navigate('DetailTransaction');
+  };
+
   return (
-    <TouchableOpacity activeOpacity={0.7} onPress={() => console.log('here')}>
+    <TouchableOpacity activeOpacity={0.7} onPress={onDetail}>
       <View style={styles.container}>
         <View style={styles.rowContent}>
           <View>

@@ -1,6 +1,6 @@
 import React from 'react';
 import {createStackNavigator} from '@react-navigation/stack';
-import {Home, Profile, SplashScreen} from '../screens';
+import {DetailTransaction, Home, Profile, SplashScreen} from '../screens';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {BottomNavigator} from '../components';
 
@@ -18,15 +18,10 @@ const MainApp = () => {
 
 const Router = () => {
   return (
-    <Stack.Navigator
-      screenOptions={{
-        headerShown: false,
-        cardStyle: {
-          backgroundColor: 'white'
-        }
-      }}>
+    <Stack.Navigator screenOptions={{headerShown: false}}>
       <Stack.Screen name="SplashScreen" component={SplashScreen} />
       <Stack.Screen name="MainApp" component={MainApp} />
+      <Stack.Screen name="DetailTransaction" component={DetailTransaction} />
     </Stack.Navigator>
   );
 };

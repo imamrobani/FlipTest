@@ -9,6 +9,7 @@ import IcPlusPurple from './ic-plus-purple.svg';
 import IcMinPurple from './ic-minus-purple.svg';
 import IcSearch from './ic-search.svg';
 import IcChevronDown from './ic-chevron-down.svg';
+import IcCopy from './ic-copy1.svg';
 
 export {
   IcHomeOff,
@@ -21,5 +22,6 @@ export {
   IcPlusPurple,
   IcMinPurple,
   IcSearch,
-  IcChevronDown
+  IcChevronDown,
+  IcCopy
 };
