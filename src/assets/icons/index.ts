@@ -4,6 +4,7 @@ import IcProfileOff from './ic-profile-off.svg';
 import IcProfileOn from './ic-profile-on.svg';
 import IcChevron from './ic-chevron.svg';
 import IcArrowLeft from './ic-arrow-left.svg';
+import IcArrowRight from './ic-arrow-right.svg';
 import IcPlusPurple from './ic-plus-purple.svg';
 import IcMinPurple from './ic-minus-purple.svg';
 
@@ -14,6 +15,7 @@ export {
   IcProfileOn,
   IcChevron,
   IcArrowLeft,
+  IcArrowRight,
   IcPlusPurple,
   IcMinPurple
 };
