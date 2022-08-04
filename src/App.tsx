@@ -4,20 +4,29 @@ import {NavigationContainer} from '@react-navigation/native';
 import Router from './router';
 import {enableScreens} from 'react-native-screens';
 import {Colors} from './const';
-
+import {Provider, useSelector} from 'react-redux';
+import store from './redux/store';
+import {Loading} from './components';
 enableScreens();
 
 const MainApp = () => {
+  const {isLoadingGlobal} = useSelector((state: any) => state.globalReducer);
+
   return (
     <NavigationContainer>
       <SafeAreaView style={{backgroundColor: Colors.purple400}} />
       <Router />
+      {isLoadingGlobal && <Loading />}
     </NavigationContainer>
   );
 };
 
 const App = () => {
-  return <MainApp />;
+  return (
+    <Provider store={store}>
+      <MainApp />
+    </Provider>
+  );
 };
 
 export default App;
