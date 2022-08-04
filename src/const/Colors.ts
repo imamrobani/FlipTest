@@ -18,6 +18,11 @@ const Colors = {
 
   green: '#05944F',
   green50: '#E6F2ED',
+  green100: '#ADDEC9',
+  green200: '#66D19E',
+  green300: '#06C167',
+  green400: '#05944F',
+  green500: '#03703C',
 
   purple: '#7356BF',
   purple50: '#F4F1FA',
