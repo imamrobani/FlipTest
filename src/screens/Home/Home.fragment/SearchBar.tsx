@@ -1,17 +1,23 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {StyleSheet, Text, View, TextInput, Pressable} from 'react-native';
 import {IcChevronDown, IcSearch} from '../../../assets';
 import {Colors, Fonts} from '../../../const';
+import SortModal from './SortModal';
 
 const SearchBar = () => {
+  const [isVisible, setIsVisible] = useState(false);
+
   return (
-    <View style={styles.container}>
-      <IcSearch />
-      <TextInput style={styles.inputContainer} placeholder="Cari nama, bank, atau nominal" />
-      <Pressable style={styles.row}>
-        <Text style={styles.sort}>URUTKAN</Text>
-        <IcChevronDown />
-      </Pressable>
+    <View>
+      <View style={styles.container}>
+        <IcSearch />
+        <TextInput style={styles.inputContainer} placeholder="Cari nama, bank, atau nominal" />
+        <Pressable style={styles.row} onPress={() => setIsVisible(true)}>
+          <Text style={styles.sort}>URUTKAN</Text>
+          <IcChevronDown />
+        </Pressable>
+      </View>
+      <SortModal isVisible={isVisible} setIsVisible={setIsVisible} />
     </View>
   );
 };
