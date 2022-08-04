@@ -7,6 +7,8 @@ import IcArrowLeft from './ic-arrow-left.svg';
 import IcArrowRight from './ic-arrow-right.svg';
 import IcPlusPurple from './ic-plus-purple.svg';
 import IcMinPurple from './ic-minus-purple.svg';
+import IcSearch from './ic-search.svg';
+import IcChevronDown from './ic-chevron-down.svg';
 
 export {
   IcHomeOff,
@@ -17,5 +19,7 @@ export {
   IcArrowLeft,
   IcArrowRight,
   IcPlusPurple,
-  IcMinPurple
+  IcMinPurple,
+  IcSearch,
+  IcChevronDown
 };

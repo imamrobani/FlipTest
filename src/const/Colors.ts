@@ -39,6 +39,8 @@ const Colors = {
   yellow: '#FFC043',
   yellow50: '#FFFAF0',
 
+  orange: '#F46940',
+
   backgroundOverlayDark: '#4D1F1F1F'
 };
 
