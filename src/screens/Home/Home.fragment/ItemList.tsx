@@ -5,7 +5,7 @@ import {IcArrowRight} from '../../../assets';
 import Status from './Status';
 import {useNavigation} from '@react-navigation/native';
 import {ItemListProps} from '../Home.interface';
-import {formatRp} from '../../../utils/Helper/Helper';
+import {formatDate, formatRp} from '../../../utils/Helper/Helper';
 
 const ItemList = ({data}: {data: ItemListProps}) => {
   const navigation = useNavigation<any>();
@@ -28,7 +28,7 @@ const ItemList = ({data}: {data: ItemListProps}) => {
             <View style={styles.rowItem}>
               <Text style={styles.name}>{formatRp(data?.amount)}</Text>
               <View style={styles.dot} />
-              <Text style={styles.name}>{data?.created_at}</Text>
+              <Text style={styles.name}>{formatDate(data?.created_at)}</Text>
             </View>
           </View>
           <Status data={data} />
