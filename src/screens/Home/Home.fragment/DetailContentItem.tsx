@@ -1,10 +1,11 @@
 import React from 'react';
 import {StyleSheet, Text, View} from 'react-native';
 import {Colors, Fonts} from '../../../const';
+import {Scale} from '../../../utils';
 
 interface DetailContentItemProps {
   name: string;
-  value: string;
+  value: string | number;
 }
 
 const DetailContentItem = ({name, value}: DetailContentItemProps) => {
@@ -19,7 +20,8 @@ const DetailContentItem = ({name, value}: DetailContentItemProps) => {
 const styles = StyleSheet.create({
   name: {
     fontFamily: Fonts.INTER_SEMIBOLD,
-    color: Colors.black
+    color: Colors.black,
+    width: Scale(145)
   },
   value: {
     fontFamily: Fonts.INTER_REGULAR,

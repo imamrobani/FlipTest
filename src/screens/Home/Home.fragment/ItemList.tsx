@@ -10,7 +10,7 @@ const ItemList = ({data}: {data: ItemListProps}) => {
   const navigation = useNavigation<any>();
 
   const onDetail = () => {
-    navigation.navigate('DetailTransaction');
+    navigation.navigate('DetailTransaction', {data});
   };
 
   return (
@@ -30,7 +30,7 @@ const ItemList = ({data}: {data: ItemListProps}) => {
               <Text style={styles.name}>{data?.created_at}</Text>
             </View>
           </View>
-          <Status />
+          <Status data={data} />
         </View>
       </View>
     </TouchableOpacity>

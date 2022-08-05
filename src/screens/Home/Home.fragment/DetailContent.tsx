@@ -1,24 +1,37 @@
 import React from 'react';
-import {StyleSheet, Text, View} from 'react-native';
+import {StyleSheet, View} from 'react-native';
 import {Gap} from '../../../components';
 import {Colors, Fonts} from '../../../const';
 import DetailContentItem from './DetailContentItem';
 import TitleBank from './TitleBank';
+import {useRoute} from '@react-navigation/native';
+import {ItemListProps} from '../Home.interface';
 
 const DetailContent = () => {
+  const route = useRoute<any>();
+  const data: ItemListProps = route?.params?.data;
+
   return (
     <View style={styles.container}>
-      <TitleBank sender="Permata" beneficiary="BNI" />
+      <TitleBank
+        sender={data?.sender_bank.toUpperCase()}
+        beneficiary={data?.beneficiary_bank.toUpperCase()}
+      />
       <View style={styles.row}>
-        <DetailContentItem name={'SYIFA SALSABYLA'} value={'0313955548'} />
-        <DetailContentItem name={'NOMINAL'} value={'Ro.10.048'} />
+        <DetailContentItem
+          name={data?.beneficiary_name.toUpperCase()}
+          value={data?.account_number}
+        />
+        <DetailContentItem name={'NOMINAL'} value={data?.amount} />
       </View>
       <View style={styles.row}>
-        <DetailContentItem name={'BERITA TRANSFER'} value={'Coba mbanking yey'} />
-        <DetailContentItem name={'KODE UNIK'} value={'50'} />
+        <DetailContentItem name={'BERITA TRANSFER'} value={data?.remark} />
+        <DetailContentItem name={'KODE UNIK'} value={data?.unique_code} />
       </View>
       <Gap height={8} />
-      <DetailContentItem name={'WAKTU DIBUAT'} value={'8 April 2020'} />
+      <View style={styles.row}>
+        <DetailContentItem name={'WAKTU DIBUAT'} value={data?.created_at} />
+      </View>
     </View>
   );
 };
@@ -31,7 +44,6 @@ const styles = StyleSheet.create({
   row: {
     flexDirection: 'row',
     justifyContent: 'space-between',
-    marginRight: 32,
     marginVertical: 8
   },
   name: {

@@ -1,11 +1,12 @@
 import React from 'react';
 import {StyleSheet, Text, View} from 'react-native';
 import {Colors, Fonts} from '../../../const';
+import {ItemListProps} from '../Home.interface';
 
-const Status = () => {
+const Status = ({data}: {data: ItemListProps}) => {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Berhasil</Text>
+      <Text style={styles.title}>{data?.status}</Text>
     </View>
   );
 };

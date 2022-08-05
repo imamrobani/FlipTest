@@ -14,7 +14,6 @@ const ListTransaction = () => {
   }, []);
 
   const renderItem = ({item}: any) => {
-    // console.tron.log(transactions[item]);
     return <ItemList data={transactions[item]} />;
   };
 
