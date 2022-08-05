@@ -22,9 +22,9 @@ const SortModal = ({isVisible, setIsVisible}: SortModalProps) => {
     setIsVisible(false);
   };
 
-  const renderItem = ({item, index}: any) => {
+  const renderItem = ({item}: any) => {
     return (
-      <TouchableOpacity activeOpacity={0.7} onPress={() => onSelect(item)}>
+      <TouchableOpacity key={item?.id} activeOpacity={0.7} onPress={() => onSelect(item)}>
         <View style={styles.row}>
           {selected.id === item.id ? <IcRadioChecked /> : <IcRadioUnChecked />}
           <Gap width={8} />

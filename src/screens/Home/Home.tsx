@@ -1,16 +1,14 @@
 import React from 'react';
 import {StyleSheet, View} from 'react-native';
 import {Colors, Fonts} from '../../const';
-import ItemList from './Home.fragment/ItemList';
+import ListTransaction from './Home.fragment/ListTransaction';
 import SearchBar from './Home.fragment/SearchBar';
 
 const Home = () => {
   return (
     <View style={styles.container}>
       <SearchBar />
-      <ItemList />
-      <ItemList />
-      <ItemList />
+      <ListTransaction />
     </View>
   );
 };

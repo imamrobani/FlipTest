@@ -4,8 +4,9 @@ import {Colors, Fonts} from '../../../const';
 import {IcArrowRight} from '../../../assets';
 import Status from './Status';
 import {useNavigation} from '@react-navigation/native';
+import {ItemListProps} from '../Home.interface';
 
-const ItemList = () => {
+const ItemList = ({data}: {data: ItemListProps}) => {
   const navigation = useNavigation<any>();
 
   const onDetail = () => {
@@ -18,15 +19,15 @@ const ItemList = () => {
         <View style={styles.rowContent}>
           <View>
             <View style={styles.rowItem}>
-              <Text style={styles.bankName}>Permata</Text>
+              <Text style={styles.bankName}>{data?.sender_bank.toUpperCase()}</Text>
               <IcArrowRight />
-              <Text style={styles.bankName}>BCA</Text>
+              <Text style={styles.bankName}>{data?.beneficiary_bank.toUpperCase()}</Text>
             </View>
-            <Text style={styles.name}>REZA MAULIADI</Text>
+            <Text style={styles.name}>{data?.beneficiary_name.toUpperCase()}</Text>
             <View style={styles.rowItem}>
-              <Text style={styles.name}>Rp.10.010</Text>
+              <Text style={styles.name}>{data?.amount}</Text>
               <View style={styles.dot} />
-              <Text style={styles.name}>8 April 2020</Text>
+              <Text style={styles.name}>{data?.created_at}</Text>
             </View>
           </View>
           <Status />
