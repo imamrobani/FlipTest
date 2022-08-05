@@ -6,6 +6,7 @@ import DetailContentItem from './DetailContentItem';
 import TitleBank from './TitleBank';
 import {useRoute} from '@react-navigation/native';
 import {ItemListProps} from '../Home.interface';
+import {formatDate, formatRp} from '../../../utils/Helper/Helper';
 
 const DetailContent = () => {
   const route = useRoute<any>();
@@ -22,7 +23,7 @@ const DetailContent = () => {
           name={data?.beneficiary_name.toUpperCase()}
           value={data?.account_number}
         />
-        <DetailContentItem name={'NOMINAL'} value={data?.amount} />
+        <DetailContentItem name={'NOMINAL'} value={formatRp(data?.amount)} />
       </View>
       <View style={styles.row}>
         <DetailContentItem name={'BERITA TRANSFER'} value={data?.remark} />
@@ -30,7 +31,7 @@ const DetailContent = () => {
       </View>
       <Gap height={8} />
       <View style={styles.row}>
-        <DetailContentItem name={'WAKTU DIBUAT'} value={data?.created_at} />
+        <DetailContentItem name={'WAKTU DIBUAT'} value={formatDate(data?.created_at)} />
       </View>
     </View>
   );
