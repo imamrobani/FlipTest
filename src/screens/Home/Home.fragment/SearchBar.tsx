@@ -41,7 +41,9 @@ const styles = StyleSheet.create({
     borderRadius: 4
   },
   inputContainer: {
-    flex: 1
+    flex: 1,
+    paddingVertical: 12,
+    paddingLeft: 8
   },
   row: {
     flexDirection: 'row',
