@@ -12,9 +12,6 @@ interface SearchBarProps {
 const SearchBar = ({onChangeText, onSort}: SearchBarProps) => {
   const [isVisible, setIsVisible] = useState(false);
 
-  // const onSort = (item: any) => {
-  //   console.tron.log(item);
-  // };
   return (
     <View>
       <View style={styles.container}>

@@ -1,8 +1,6 @@
 import React from 'react';
-import {StyleSheet, Text, View} from 'react-native';
-import {IcCopy} from '../../assets';
+import {StyleSheet, View} from 'react-native';
 import {Gap, Header} from '../../components';
-import {Colors, Fonts} from '../../const';
 import DetailContent from './Home.fragment/DetailContent';
 import DetailHeader from './Home.fragment/DetailHeader';
 

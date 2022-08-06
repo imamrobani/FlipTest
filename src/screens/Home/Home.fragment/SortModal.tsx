@@ -57,11 +57,7 @@ const SortModal = ({isVisible, setIsVisible, onSort}: SortModalProps) => {
 };
 
 const styles = StyleSheet.create({
-  view: {
-    flex: 1
-    // justifyContent: 'center',
-    // alignItems: 'center'
-  },
+  view: {flex: 1},
   content: {
     backgroundColor: Colors.white,
     padding: 16,
@@ -76,7 +72,6 @@ const styles = StyleSheet.create({
   title: {
     fontFamily: Fonts.INTER_SEMIBOLD,
     color: Colors.black
-    // fontSize
   }
 });
 

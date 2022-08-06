@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import {FlatList, StyleSheet, Text, View} from 'react-native';
+import {FlatList, StyleSheet, View} from 'react-native';
 import ItemList from './ItemList';
 import {useDispatch, useSelector} from 'react-redux';
 import {getListTransaction} from '../../../redux/action';
@@ -25,21 +25,17 @@ const ListTransaction = () => {
     let newObject: any = {};
 
     Object.keys(transactions).forEach(item => {
-      if (transactions[item]?.beneficiary_name?.toLowerCase().includes(text?.toLowerCase())) {
+      if (transactions[item]?.beneficiary_name?.toLowerCase().includes(text?.toLowerCase()))
         newObject[item] = transactions[item];
-      }
 
-      if (transactions[item]?.beneficiary_bank?.toLowerCase().includes(text?.toLowerCase())) {
+      if (transactions[item]?.beneficiary_bank?.toLowerCase().includes(text?.toLowerCase()))
         newObject[item] = transactions[item];
-      }
 
-      if (transactions[item]?.sender_bank?.toLowerCase().includes(text?.toLowerCase())) {
+      if (transactions[item]?.sender_bank?.toLowerCase().includes(text?.toLowerCase()))
         newObject[item] = transactions[item];
-      }
 
-      if (transactions[item]?.amount?.toString().includes(text)) {
+      if (transactions[item]?.amount?.toString().includes(text))
         newObject[item] = transactions[item];
-      }
     });
 
     setDataTrasactions(newObject);
