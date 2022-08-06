@@ -1,14 +1,24 @@
 import React from 'react';
-import {StyleSheet, Text, View} from 'react-native';
+import {Alert, Platform, Pressable, StyleSheet, Text, ToastAndroid, View} from 'react-native';
 import {IcCopy} from '../../../assets';
 import {Gap} from '../../../components';
 import {Colors, Fonts} from '../../../const';
 import {useRoute} from '@react-navigation/native';
 import {ItemListProps} from '../Home.interface';
+import Clipboard from '@react-native-clipboard/clipboard';
 
 const DetailHeader = () => {
   const route = useRoute<any>();
   const data: ItemListProps = route?.params?.data;
+
+  const onCopy = () => {
+    Clipboard.setString(data?.id);
+    if (Platform.OS === 'android') {
+      ToastAndroid.show('Berhasil disalin', ToastAndroid.SHORT);
+    } else if (Platform.OS === 'ios') {
+      Alert.alert('Berhasil disalin');
+    }
+  };
 
   return (
     <>
@@ -17,7 +27,9 @@ const DetailHeader = () => {
           <Text style={styles.title}>ID TRANSAKSI: </Text>
           <Text style={styles.title}>{`#${data?.id}`}</Text>
           <Gap width={4} />
-          <IcCopy />
+          <Pressable onPress={onCopy}>
+            <IcCopy />
+          </Pressable>
         </View>
       </View>
       <Gap height={0.5} />
