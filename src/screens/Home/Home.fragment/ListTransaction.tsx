@@ -2,8 +2,8 @@ import React, {useEffect, useState} from 'react';
 import {FlatList, StyleSheet, View} from 'react-native';
 import ItemList from './ItemList';
 import {useDispatch, useSelector} from 'react-redux';
-import {getListTransaction} from '../../../redux/action';
 import SearchBar from './SearchBar';
+import {getListTransaction} from '@action';
 import {useEffectAfterMount} from '@hooks';
 
 const ListTransaction = () => {

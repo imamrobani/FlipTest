@@ -1,7 +1,7 @@
 import React from 'react';
 import {StyleSheet, Text, View} from 'react-native';
-import {IcArrowRight} from '../../../assets';
-import {Colors, Fonts} from '../../../const';
+import {IcArrowRight} from '@assets';
+import {Colors, Fonts} from '@const';
 
 interface TitleBankProps {
   sender: string;

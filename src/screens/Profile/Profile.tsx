@@ -1,7 +1,7 @@
 import React from 'react';
 import {StyleSheet, Dimensions, ScrollView} from 'react-native';
 import * as Animatable from 'react-native-animatable';
-import {Mario2} from '../../assets';
+import {Mario2} from '@assets';
 import ColorSection from './Profile.fragment/ColorSection';
 import MenuSection from './Profile.fragment/MenuSection';
 

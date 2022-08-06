@@ -1,8 +1,8 @@
 import React from 'react';
 import {Alert, Platform, Pressable, StyleSheet, Text, ToastAndroid, View} from 'react-native';
-import {IcCopy} from '../../../assets';
-import {Gap} from '../../../components';
-import {Colors, Fonts} from '../../../const';
+import {IcCopy} from '@assets';
+import {Gap} from '@components';
+import {Colors, Fonts} from '@const';
 import {useRoute} from '@react-navigation/native';
 import {ItemListProps} from '../Home.interface';
 import Clipboard from '@react-native-clipboard/clipboard';

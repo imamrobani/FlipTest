@@ -1,7 +1,7 @@
 import React from 'react';
 import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
-import {IcChevron} from '../../../assets';
-import {Colors, Fonts} from '../../../const';
+import {IcChevron} from '@assets';
+import {Colors, Fonts} from '@const';
 
 interface ItemListMenuProps {
   text: string;

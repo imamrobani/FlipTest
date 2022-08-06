@@ -1,6 +1,6 @@
 import React from 'react';
 import {StyleSheet, Text, View} from 'react-native';
-import {Colors, Fonts} from '../../../const';
+import {Colors, Fonts} from '@const';
 import {ItemListProps} from '../Home.interface';
 
 const Status = ({data}: {data: ItemListProps}) => {

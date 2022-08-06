@@ -1,9 +1,9 @@
 import React, {useState} from 'react';
 import {FlatList, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import Modal from 'react-native-modal';
-import {IcRadioChecked, IcRadioUnChecked} from '../../../assets';
-import {Gap} from '../../../components';
-import {Colors, Fonts} from '../../../const';
+import {IcRadioChecked, IcRadioUnChecked} from '@assets';
+import {Gap} from '@components';
+import {Colors, Fonts} from '@const';
 import {SORT} from '../Home.mock';
 
 interface SortModalProps {

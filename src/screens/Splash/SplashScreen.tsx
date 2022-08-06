@@ -1,9 +1,9 @@
 import React, {useEffect} from 'react';
 import {View, Text, StyleSheet} from 'react-native';
 import * as Animatable from 'react-native-animatable';
-import {Logo} from '../../assets';
-import {Gap} from '../../components';
-import {Colors, Fonts} from '../../const';
+import {Logo} from '@assets';
+import {Gap} from '@components';
+import {Colors, Fonts} from '@const';
 
 const SplashScreen = ({navigation}: any) => {
   useEffect(() => {

@@ -1,8 +1,8 @@
 import React from 'react';
 import {createStackNavigator} from '@react-navigation/stack';
-import {DetailTransaction, Home, Profile, SplashScreen} from '../screens';
+import {DetailTransaction, Home, Profile, SplashScreen} from '@screens';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
-import {BottomNavigator} from '../components';
+import {BottomNavigator} from '@components';
 
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();

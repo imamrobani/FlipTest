@@ -1,6 +1,6 @@
 import React from 'react';
 import {StyleSheet, View} from 'react-native';
-import {Colors, Fonts} from '../../const';
+import {Colors, Fonts} from '@const';
 import ListTransaction from './Home.fragment/ListTransaction';
 
 const Home = () => {

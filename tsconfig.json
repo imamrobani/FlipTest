@@ -22,15 +22,15 @@
       "@assets/*": ["src/assets/*"],
       "@components": ["src/components/index.ts"],
       "@components/*": ["src/components/*"],
-      "@const/": ["src/const/index.ts"],
+      "@const": ["src/const/index.ts"],
       "@hooks": ["src/hooks/index.ts"],
       "@redux/*": ["src/redux/*"],
-      "@action/": ["src/redux/action/index.ts"],
-      "@reducer/": ["src/redux/reducer/index.ts"],
-      "@router/": ["src/router/index.ts"],
-      "@screens/": ["src/screens/index.ts"],
-      "@utils/": ["src/utils/index.ts"],
-      "@helper/": ["src/utils/Helper/helper.ts"]
+      "@action": ["src/redux/action/index.ts"],
+      "@reducer": ["src/redux/reducer/index.ts"],
+      "@router": ["src/router/index.ts"],
+      "@screens": ["src/screens/index.ts"],
+      "@utils": ["src/utils/index.ts"],
+      "@helper": ["src/utils/Helper/Helper.ts"]
     }
   },
   "exclude": ["node_modules", "babel.config.js", "metro.config.js"]

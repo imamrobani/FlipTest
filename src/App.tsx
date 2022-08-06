@@ -3,10 +3,10 @@ import {SafeAreaView} from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
 import Router from './router';
 import {enableScreens} from 'react-native-screens';
-import {Colors} from './const';
+import {Colors} from '@const';
 import {Provider, useSelector} from 'react-redux';
 import store from './redux/store';
-import {Loading} from './components';
+import {Loading} from '@components';
 enableScreens();
 
 const MainApp = () => {

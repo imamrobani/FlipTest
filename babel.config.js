@@ -20,7 +20,7 @@ module.exports = {
           '@router': './src/router',
           '@screens': './src/screens',
           '@utils': './src/utils',
-          '@helper': './src/utils/Helper'
+          '@helper': './src/utils/Helper/Helper.ts'
         }
       }
     ],

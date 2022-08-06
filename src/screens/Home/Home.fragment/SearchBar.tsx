@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import {StyleSheet, Text, View, TextInput, Pressable} from 'react-native';
-import {IcChevronDown, IcSearch} from '../../../assets';
-import {Colors, Fonts} from '../../../const';
+import {IcChevronDown, IcSearch} from '@assets';
+import {Colors, Fonts} from '@const';
 import SortModal from './SortModal';
 
 interface SearchBarProps {

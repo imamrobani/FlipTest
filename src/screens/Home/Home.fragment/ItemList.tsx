@@ -1,11 +1,11 @@
 import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import React from 'react';
-import {Colors, Fonts} from '../../../const';
-import {IcArrowRight} from '../../../assets';
+import {Colors, Fonts} from '@const';
+import {IcArrowRight} from '@assets';
 import Status from './Status';
 import {useNavigation} from '@react-navigation/native';
 import {ItemListProps} from '../Home.interface';
-import {formatDate, formatRp} from '../../../utils/Helper/Helper';
+import {formatDate, formatRp} from '@utils';
 
 const ItemList = ({data}: {data: ItemListProps}) => {
   const navigation = useNavigation<any>();

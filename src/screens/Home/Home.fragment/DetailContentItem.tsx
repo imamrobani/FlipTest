@@ -1,7 +1,7 @@
 import React from 'react';
 import {StyleSheet, Text, View} from 'react-native';
-import {Colors, Fonts} from '../../../const';
-import {Scale} from '../../../utils';
+import {Colors, Fonts} from '@const';
+import {Scale} from '@utils';
 
 interface DetailContentItemProps {
   name: string;

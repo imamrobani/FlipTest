@@ -1,12 +1,12 @@
 import React from 'react';
 import {StyleSheet, View} from 'react-native';
-import {Gap} from '../../../components';
-import {Colors, Fonts} from '../../../const';
+import {Gap} from '@components';
+import {Colors, Fonts} from '@const';
 import DetailContentItem from './DetailContentItem';
 import TitleBank from './TitleBank';
 import {useRoute} from '@react-navigation/native';
 import {ItemListProps} from '../Home.interface';
-import {formatDate, formatRp} from '../../../utils/Helper/Helper';
+import {formatDate, formatRp} from '@utils';
 
 const DetailContent = () => {
   const route = useRoute<any>();

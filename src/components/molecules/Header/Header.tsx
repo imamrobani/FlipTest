@@ -1,8 +1,8 @@
 import React from 'react';
 import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
-import {IcArrowLeft} from '../../../assets';
-import {Colors, Fonts} from '../../../const';
-import {Scale} from '../../../utils';
+import {IcArrowLeft} from '@assets';
+import {Colors, Fonts} from '@const';
+import {Scale} from '@utils';
 import {Gap} from '../../atoms';
 
 interface HeaderProps {
