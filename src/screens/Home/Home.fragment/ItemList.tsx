@@ -20,11 +20,11 @@ const ItemList = ({data}: {data: ItemListProps}) => {
         <View style={styles.rowContent}>
           <View>
             <View style={styles.rowItem}>
-              <Text style={styles.bankName}>{data?.sender_bank.toUpperCase()}</Text>
+              <Text style={styles.bankName}>{data?.sender_bank?.toUpperCase()}</Text>
               <IcArrowRight />
-              <Text style={styles.bankName}>{data?.beneficiary_bank.toUpperCase()}</Text>
+              <Text style={styles.bankName}>{data?.beneficiary_bank?.toUpperCase()}</Text>
             </View>
-            <Text style={styles.name}>{data?.beneficiary_name.toUpperCase()}</Text>
+            <Text style={styles.name}>{data?.beneficiary_name?.toUpperCase()}</Text>
             <View style={styles.rowItem}>
               <Text style={styles.name}>{formatRp(data?.amount)}</Text>
               <View style={styles.dot} />

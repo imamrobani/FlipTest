@@ -4,14 +4,22 @@ import {IcChevronDown, IcSearch} from '../../../assets';
 import {Colors, Fonts} from '../../../const';
 import SortModal from './SortModal';
 
-const SearchBar = () => {
+interface SearchBarProps {
+  onChangeText: (text: string) => void;
+}
+
+const SearchBar = ({onChangeText}: SearchBarProps) => {
   const [isVisible, setIsVisible] = useState(false);
 
   return (
     <View>
       <View style={styles.container}>
         <IcSearch />
-        <TextInput style={styles.inputContainer} placeholder="Cari nama, bank, atau nominal" />
+        <TextInput
+          style={styles.inputContainer}
+          placeholder="Cari nama, bank, atau nominal"
+          onChangeText={onChangeText}
+        />
         <Pressable style={styles.row} onPress={() => setIsVisible(true)}>
           <Text style={styles.sort}>URUTKAN</Text>
           <IcChevronDown />

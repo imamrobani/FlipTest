@@ -15,12 +15,12 @@ const DetailContent = () => {
   return (
     <View style={styles.container}>
       <TitleBank
-        sender={data?.sender_bank.toUpperCase()}
-        beneficiary={data?.beneficiary_bank.toUpperCase()}
+        sender={data?.sender_bank?.toUpperCase()}
+        beneficiary={data?.beneficiary_bank?.toUpperCase()}
       />
       <View style={styles.row}>
         <DetailContentItem
-          name={data?.beneficiary_name.toUpperCase()}
+          name={data?.beneficiary_name?.toUpperCase()}
           value={data?.account_number}
         />
         <DetailContentItem name={'NOMINAL'} value={formatRp(data?.amount)} />

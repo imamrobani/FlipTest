@@ -23,8 +23,11 @@ export const getMonthName = (index: number) => {
 };
 
 export const formatDate = (dateString: string) => {
-  const split = dateString.split(' ');
-  const date = new Date(split[0]);
-  let dateStr = date.getDate() + ' ' + getMonthName(date.getMonth()) + ' ' + date.getFullYear();
-  return dateStr;
+  let result: string = '';
+  if (dateString) {
+    const split = dateString.split(' ');
+    const date = new Date(split[0]);
+    result = date.getDate() + ' ' + getMonthName(date.getMonth()) + ' ' + date.getFullYear();
+  }
+  return result;
 };
