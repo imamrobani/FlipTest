@@ -23,7 +23,7 @@
       "@components": ["src/components/index.ts"],
       "@components/*": ["src/components/*"],
       "@const/": ["src/const/index.ts"],
-      "@hooks/": ["src/hooks/index.ts"],
+      "@hooks": ["src/hooks/index.ts"],
       "@redux/*": ["src/redux/*"],
       "@action/": ["src/redux/action/index.ts"],
       "@reducer/": ["src/redux/reducer/index.ts"],
