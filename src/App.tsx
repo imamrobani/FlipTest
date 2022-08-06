@@ -14,7 +14,7 @@ const MainApp = () => {
 
   return (
     <NavigationContainer>
-      <SafeAreaView style={{backgroundColor: Colors.purple400}} />
+      <SafeAreaView style={{backgroundColor: Colors.green}} />
       <Router />
       {isLoadingGlobal && <Loading />}
     </NavigationContainer>
