@@ -6,11 +6,15 @@ import SortModal from './SortModal';
 
 interface SearchBarProps {
   onChangeText: (text: string) => void;
+  onSort: (item: any) => void;
 }
 
-const SearchBar = ({onChangeText}: SearchBarProps) => {
+const SearchBar = ({onChangeText, onSort}: SearchBarProps) => {
   const [isVisible, setIsVisible] = useState(false);
 
+  // const onSort = (item: any) => {
+  //   console.tron.log(item);
+  // };
   return (
     <View>
       <View style={styles.container}>
@@ -25,7 +29,7 @@ const SearchBar = ({onChangeText}: SearchBarProps) => {
           <IcChevronDown />
         </Pressable>
       </View>
-      <SortModal isVisible={isVisible} setIsVisible={setIsVisible} />
+      <SortModal isVisible={isVisible} setIsVisible={setIsVisible} onSort={onSort} />
     </View>
   );
 };

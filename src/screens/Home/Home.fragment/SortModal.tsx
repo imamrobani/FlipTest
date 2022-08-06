@@ -9,13 +9,18 @@ import {SORT} from '../Home.mock';
 interface SortModalProps {
   isVisible: boolean;
   setIsVisible: (isVisible: boolean) => void;
+  onSort: (item: any) => void;
 }
 
-const SortModal = ({isVisible, setIsVisible}: SortModalProps) => {
+const SortModal = ({isVisible, setIsVisible, onSort}: SortModalProps) => {
   const [selected, setSelected] = useState({id: 0, label: ''});
 
   const onSelect = (item: any) => {
     setSelected(item);
+    onSort(item);
+    setTimeout(() => {
+      onClose();
+    }, 500);
   };
 
   const onClose = () => {

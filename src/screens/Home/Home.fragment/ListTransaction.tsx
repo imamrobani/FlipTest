@@ -45,13 +45,69 @@ const ListTransaction = () => {
     setDataTrasactions(newObject);
   };
 
+  const onSort = (item: any) => {
+    if (item?.id === 1) nameAsc();
+    if (item?.id === 2) nameDsc();
+    if (item?.id === 3) dateDsc();
+    if (item?.id === 4) dateAsc();
+    if (item?.id === 0) setDataTrasactions(transactions);
+  };
+
+  const nameAsc = () => {
+    const sorted = Object.keys(transactions)
+      .sort((a, b) =>
+        transactions[a].beneficiary_name < transactions[b].beneficiary_name ? -1 : 1
+      )
+      .reduce((accumulator: any, key) => {
+        accumulator[key] = transactions[key];
+        return accumulator;
+      }, {});
+
+    setDataTrasactions(sorted);
+  };
+
+  const nameDsc = () => {
+    const sorted = Object.keys(transactions)
+      .sort((a, b) =>
+        transactions[a].beneficiary_name > transactions[b].beneficiary_name ? -1 : 1
+      )
+      .reduce((accumulator: any, key) => {
+        accumulator[key] = transactions[key];
+        return accumulator;
+      }, {});
+
+    setDataTrasactions(sorted);
+  };
+
+  const dateAsc = () => {
+    const sorted = Object.keys(transactions)
+      .sort((a, b) => (transactions[a].created_at < transactions[b].created_at ? -1 : 1))
+      .reduce((accumulator: any, key) => {
+        accumulator[key] = transactions[key];
+        return accumulator;
+      }, {});
+
+    setDataTrasactions(sorted);
+  };
+
+  const dateDsc = () => {
+    const sorted = Object.keys(transactions)
+      .sort((a, b) => (transactions[a].created_at > transactions[b].created_at ? -1 : 1))
+      .reduce((accumulator: any, key) => {
+        accumulator[key] = transactions[key];
+        return accumulator;
+      }, {});
+
+    setDataTrasactions(sorted);
+  };
+
   const renderItem = ({item}: any) => {
     return <ItemList data={transactions[item]} />;
   };
 
   return (
     <View style={styles.container}>
-      <SearchBar onChangeText={onChangeText} />
+      <SearchBar onSort={onSort} onChangeText={onChangeText} />
       <FlatList
         data={Object.keys(dataTrasactions)}
         contentContainerStyle={styles.content}
