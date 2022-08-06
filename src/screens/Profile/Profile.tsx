@@ -1,26 +1,32 @@
 import React from 'react';
-import {StyleSheet, Text, View} from 'react-native';
-import {Colors, Fonts} from '../../const';
+import {StyleSheet, Dimensions, ScrollView} from 'react-native';
+import * as Animatable from 'react-native-animatable';
+import {Mario2} from '../../assets';
+import ColorSection from './Profile.fragment/ColorSection';
+import MenuSection from './Profile.fragment/MenuSection';
+
+const {width} = Dimensions.get('window');
 
 const Profile = () => {
   return (
-    <View style={styles.container}>
-      <Text style={styles.title}>Profile Screen</Text>
-    </View>
+    <ScrollView style={styles.container}>
+      <Animatable.Image source={Mario2} style={styles.image} animation={'fadeInDown'} />
+      <ColorSection />
+      <MenuSection />
+    </ScrollView>
   );
 };
+
+export default Profile;
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center'
+    backgroundColor: 'white'
   },
-  title: {
-    fontFamily: Fonts.INTER_SEMIBOLD,
-    color: Colors.black,
-    fontSize: 16
+  image: {
+    width: width,
+    height: width,
+    resizeMode: 'contain'
   }
 });
-
-export default Profile;
