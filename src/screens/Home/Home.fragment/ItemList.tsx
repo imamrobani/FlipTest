@@ -18,7 +18,7 @@ const ItemList = ({data}: {data: ItemListProps}) => {
     <TouchableOpacity activeOpacity={0.7} onPress={onDetail}>
       <View style={data?.status === 'SUCCESS' ? styles.container : styles.pendingContainer}>
         <View style={styles.rowContent}>
-          <View>
+          <View style={styles.flex1}>
             <View style={styles.rowItem}>
               <Text style={styles.bankName}>{data?.sender_bank?.toUpperCase()}</Text>
               <IcArrowRight />
@@ -28,7 +28,7 @@ const ItemList = ({data}: {data: ItemListProps}) => {
             <View style={styles.rowItem}>
               <Text style={styles.name}>{formatRp(data?.amount)}</Text>
               <View style={styles.dot} />
-              <Text style={styles.name}>{formatDate(data?.created_at)}</Text>
+              <Text style={[styles.name, styles.flex1]}>{formatDate(data?.created_at)}</Text>
             </View>
           </View>
           <Status data={data} />
@@ -57,6 +57,7 @@ const styles = StyleSheet.create({
     borderLeftWidth: 8,
     borderLeftColor: Colors.orange
   },
+  flex1: {flex: 1},
   rowContent: {
     flexDirection: 'row',
     justifyContent: 'space-between',
@@ -64,7 +65,8 @@ const styles = StyleSheet.create({
   },
   rowItem: {
     flexDirection: 'row',
-    alignItems: 'center'
+    alignItems: 'center',
+    flex: 1
   },
   bankName: {
     fontFamily: Fonts.INTER_BOLD,
