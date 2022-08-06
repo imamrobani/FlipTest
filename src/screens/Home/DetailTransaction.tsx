@@ -1,6 +1,6 @@
 import React from 'react';
 import {StyleSheet, View} from 'react-native';
-import {Gap, Header} from '../../components';
+import {Gap, Header} from '@components';
 import DetailContent from './Home.fragment/DetailContent';
 import DetailHeader from './Home.fragment/DetailHeader';
 
