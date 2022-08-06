@@ -16,7 +16,7 @@ const ItemList = ({data}: {data: ItemListProps}) => {
 
   return (
     <TouchableOpacity activeOpacity={0.7} onPress={onDetail}>
-      <View style={styles.container}>
+      <View style={data?.status === 'SUCCESS' ? styles.container : styles.pendingContainer}>
         <View style={styles.rowContent}>
           <View>
             <View style={styles.rowItem}>
@@ -47,6 +47,15 @@ const styles = StyleSheet.create({
     borderRadius: 8,
     borderLeftWidth: 8,
     borderLeftColor: Colors.green
+  },
+  pendingContainer: {
+    marginVertical: 4,
+    marginHorizontal: 8,
+    padding: 16,
+    backgroundColor: Colors.white,
+    borderRadius: 8,
+    borderLeftWidth: 8,
+    borderLeftColor: Colors.orange
   },
   rowContent: {
     flexDirection: 'row',
