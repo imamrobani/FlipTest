@@ -1,8 +1,8 @@
 # Bismillahirrahmanirrahim
 
-# AlamiTest
+# FlipTest
 
-AlamiTest made with love with React Natve (0.69.3)
+FlipTest made with love with React Natve (0.69.3)
 
 ## Instalation
 
