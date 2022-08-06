@@ -10,6 +10,7 @@ const ListTransaction = () => {
   const dispatch = useDispatch();
 
   const {transactions} = useSelector((state: any) => state.transactionReducer);
+  const {isLoadingGlobal} = useSelector((state: any) => state.globalReducer);
 
   useEffect(() => {
     dispatch(getListTransaction());
@@ -109,6 +110,8 @@ const ListTransaction = () => {
         contentContainerStyle={styles.content}
         keyExtractor={(item, index) => index.toString()}
         renderItem={renderItem}
+        onRefresh={() => dispatch(getListTransaction())}
+        refreshing={isLoadingGlobal}
       />
     </View>
   );
